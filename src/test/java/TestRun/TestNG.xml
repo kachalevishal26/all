@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="LoginSuite">
+	<listeners>
+		<listener class-name="Analyzer.MyTransformer" />
+		<listener class-name="testutils.ListenerTest" />
+	</listeners>
+	<test name="LoginTest">
+		<classes>
+			<class name="testcases.LoginPageTest">
+				<methods>
+					<include name="navToLoginTest" />
+					<include name="loginTest" />
+					<include name="verifyLoginTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
